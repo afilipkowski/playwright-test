@@ -21,9 +21,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Enter test directory
-        run: cd src/tests
-        
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run App
+        run: npx run dev
+
       - name: Run Playwright test
         run: npx playwright test
 
