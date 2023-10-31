@@ -22,5 +22,6 @@ jobs:
         run: npm install
 
       - name: Run Playwright tests
+        run: cd src/tests
         run: npx playwright test
 
